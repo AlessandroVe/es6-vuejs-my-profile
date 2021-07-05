@@ -4,12 +4,13 @@ new Vue(
     {
         el: '#profile-page',
         data: {
+            
             myProfile: {
                 details: {
                     name: 'Pierfilippo',
                     surname: 'Baudo',
                     pic: 'https://www.focus.it/site_stored/imgs/0003/042/nerd2.1020x680.jpg',
-                    newTextPost:"",
+                    newTextPost:""
                 },
                 posts: [
                     {
@@ -45,8 +46,20 @@ new Vue(
 
         },
         methods:{
+            getCurrentDateTime: function () {
+              
+                const dateTimeNow = dayjs();
+                return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+                
+            },
             newPost : function(){
-                console.log(this.newTextPost)
+                this.myProfile.posts.push(
+                    {
+                        text: this.myProfile.details.newTextPost,
+                        date: '17-06-2021',
+                    }
+                )
+                this.myProfile.details.newTextPost=""
             }
            
         }
