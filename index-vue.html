@@ -24,7 +24,7 @@
         </div>
 
         <div class="new-post">
-            <textarea v-model="myProfile.details.newTextPost" placeholder="A cosa stai pensando?"></textarea>
+            <textarea @keyup.enter="newPost()" v-model="myProfile.details.newTextPost" placeholder="A cosa stai pensando?"></textarea>
             <button class="send" @click="newPost()" >CREA</button>
         </div>
 

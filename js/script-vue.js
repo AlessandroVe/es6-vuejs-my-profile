@@ -4,7 +4,6 @@ new Vue(
     {
         el: '#profile-page',
         data: {
-            
             myProfile: {
                 details: {
                     name: 'Pierfilippo',
@@ -46,12 +45,6 @@ new Vue(
 
         },
         methods:{
-            getCurrentDateTime: function () {
-              
-                const dateTimeNow = dayjs();
-                return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
-                
-            },
             newPost : function(){
                 this.myProfile.posts.push(
                     {
