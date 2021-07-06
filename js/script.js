@@ -79,9 +79,8 @@ console.log(send)
 send.addEventListener("click",function(){
     data.myProfile.posts.push(
         {
-            text=
+            text= "ciao",
             date= '17-06-2021',
-
         }
     )
 })
